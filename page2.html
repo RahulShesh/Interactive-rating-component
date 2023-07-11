@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      <div class="main2">
+        <div class="image"><img src="images\illustration-thank-you.svg" alt=""></div>
+        <div class="rating_outof"><p>you selected </p> <p id="rate"></p><p> out of 5</p></div>
+        <div class="thankyou"><h1>Thank you!</h1></div>
+        <div class="notek"><p>We appreciate you taking the time to give a rating. if you ever need more support,don't hasitate to get in touch!</p></div>
+    </div>
+      </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          var rate = sessionStorage.getItem('selectedRate');
+          document.getElementById('rate').textContent = rate;
+        //   localStorage.removeItem('selectedRate');
+        });
+      </script>
+</body>
+</html>
